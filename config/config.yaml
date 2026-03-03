@@ -1,0 +1,42 @@
+# Resume Screening System Configuration
+
+# spaCy Model Configuration
+spacy:
+  model: "en_core_web_sm"
+  lowercase: true
+  remove_stopwords: true
+  remove_special_chars: true
+
+# BERT Model Configuration
+bert:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  max_length: 512
+  
+# Similarity Configuration
+similarity:
+  threshold: 0.3
+  top_k: 10
+  
+# File Upload Configuration
+uploads:
+  max_size_mb: 25
+  allowed_formats:
+    - "pdf"
+    - "docx"
+    - "txt"
+
+# UI Configuration
+streamlit:
+  layout: "wide"
+  theme: "light"
+
+# NER Configuration
+ner:
+  extract_skills: true
+  extract_organizations: true
+  extract_education: true
+  
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
